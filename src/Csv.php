@@ -5,14 +5,14 @@ namespace Stash\Csv;
 class Csv
 {
     protected $file;
-    
+
     protected $filePath;
 
-    protected $delimiter = ",";
+    protected $delimiter = ',';
 
     protected $enclosure = '"';
 
-    protected $escapeCharacter = "\\";
+    protected $escapeCharacter = '\\';
 
     public static function create(string $filePath = null)
     {
@@ -93,7 +93,7 @@ class Csv
 
         return $string;
     }
-    
+
     public function closeFile()
     {
         return fclose($this->file);
