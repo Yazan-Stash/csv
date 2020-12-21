@@ -1,8 +1,8 @@
 <?php
 
-namespace Stash\Csv\Tests;
+namespace YazanStash\Csv\Tests;
 
-use Stash\Csv\Csv;
+use YazanStash\Csv\Csv;
 use PHPUnit\Framework\TestCase;
 
 class CsvTest extends TestCase
@@ -33,6 +33,7 @@ class CsvTest extends TestCase
             Csv::create('/root/tmp.csv');
         } catch (\Exception $e) {
             $this->assertStringContainsString('failed to open stream: Permission denied', $e->getMessage());
+
             return;
         }
 
@@ -88,6 +89,6 @@ class CsvTest extends TestCase
     /** @test */
     public function calling_escapeCharacter_with_aguments_changes_it()
     {
-        $this->assertEquals("|", Csv::create()->escapeCharacter("|")->escapeCharacter());
+        $this->assertEquals('|', Csv::create()->escapeCharacter('|')->escapeCharacter());
     }
 }

@@ -20,17 +20,16 @@
         "php": "^7.0"
     },
     "require-dev": {
-        "symfony/var-dumper": "^4.3",
         "phpunit/phpunit": "^8.2"
     },
     "autoload": {
         "psr-4": {
-            "Stash\\Csv\\": "src"
+            "YazanStash\\Csv\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Stash\\Csv\\Tests\\": "tests"
+            "YazanStash\\Csv\\Tests\\": "tests"
         }
     },
     "scripts": {

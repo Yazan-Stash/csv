@@ -1,18 +1,18 @@
 <?php
 
-namespace Stash\Csv;
+namespace YazanStash\Csv;
 
 class Csv
 {
     protected $file;
-    
+
     protected $filePath;
 
-    protected $delimiter = ",";
+    protected $delimiter = ',';
 
     protected $enclosure = '"';
 
-    protected $escapeCharacter = "\\";
+    protected $escapeCharacter = '\\';
 
     public static function create(string $filePath = null)
     {
@@ -28,7 +28,7 @@ class Csv
         $this->file = fopen($filePath, 'w');
 
         if ($this->file === false) {
-            throw new \Exception("Could not open file: $filePath for writing.", 1);
+            throw new Exception("Could not open file: $filePath for writing.", 1);
         }
     }
 
@@ -37,7 +37,7 @@ class Csv
         $result = fputcsv($this->file, $fields, $this->delimiter, $this->enclosure, $this->escapeCharacter);
 
         if (false === $result) {
-            throw new \Exception("Could not write to file: $this->filePath.", 1);
+            throw new Exception("Could not write to file: $this->filePath.", 1);
         }
     }
 
@@ -93,7 +93,7 @@ class Csv
 
         return $string;
     }
-    
+
     public function closeFile()
     {
         return fclose($this->file);
