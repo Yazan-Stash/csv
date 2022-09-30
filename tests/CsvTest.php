@@ -32,7 +32,7 @@ class CsvTest extends TestCase
         try {
             Csv::create('/root/tmp.csv');
         } catch (\Exception $e) {
-            $this->assertStringContainsString('failed to open stream: Permission denied', $e->getMessage());
+            $this->assertStringContainsString('failed to open stream', strtolower($e->getMessage()));
 
             return;
         }

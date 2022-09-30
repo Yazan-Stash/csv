@@ -14,9 +14,9 @@ composer require yazanstash/csv
 ## Usage
 
 ``` php
-$file = Csv\Csv::create();
+$file = YazanStash\Csv::create();
 // or
-$file = Csv\Csv::create('/home/stash/Desktop/export.csv');
+$file = YazanStash\Csv::create('/home/stash/Desktop/export.csv');
 
 $file->delimiter('|')->enclosure("'")->write(['Hola Amigo!']);
 ```
